@@ -2,7 +2,9 @@ import React, { Component } from 'react';
 class Square extends Component {
 
 handleClick = () => {
-    this.props.handleLocation(this.props.value)
+    if(this.props.counter > 0 && this.props.userStatus === ""){
+    this.props.handleLocation(this.props.index)
+  }
 }
 
   render() {
